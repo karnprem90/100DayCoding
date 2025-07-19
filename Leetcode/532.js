@@ -64,4 +64,26 @@ var findPairs = function(nums, k) {
 
 };
 
+
+function optimizedApproachWithHash(nums, k) {
+    let count = 0;
+    let map = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        map.set(nums[i], (map.get(nums[i]) || 0) + 1);
+    }
+
+    for (const [num, freq] of nums) {
+        if (k === 0) {
+            if (freq >= 2) {
+                count++;
+            }
+        } else {
+            if (map.has(num + k)) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
 console.log(findPairs([3,1,4,1,5], 0));
