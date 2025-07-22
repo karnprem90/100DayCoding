@@ -10,29 +10,19 @@
 function printAllCombinationsThatSumsToGivenNumber(N) {
     let result = [];
     let prevVal = -1;
-    function dfs(index, totalVal, nums) {
-        if (totalVal > N) {
-            return;
-        }
-        if (totalVal === N) {
+    function dfs(index, remaining, nums) {
+        if (remaining === 0) {
             result.push([...nums]);
             return;
         }
-        for (let i = index; i < N + 1; i++) {
+        for (let i = index; i <= remaining + 1; i++) {
             nums.push(i);
-            if (nums.length > 1) {
-                if (nums[nums.length - 2] > nums[nums.length - 1]) {
-                    nums.pop();
-                    continue;
-                }
-            }
-            totalVal = nums.reduce((acc, val) => acc + val, 0);
-            dfs(index, totalVal, nums);
+            dfs(i, remaining - i, nums);
             nums.pop();
         }
     }
-    dfs(1, 0, []);
+    dfs(1, N, []);
     return result;
 }
 
-console.log(printAllCombinationsThatSumsToGivenNumber(0));
+console.log(printAllCombinationsThatSumsToGivenNumber(5));
