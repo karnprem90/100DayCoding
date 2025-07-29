@@ -46,13 +46,10 @@
 
 var validWordSquare = function(words) {
     let validWordSquare = false;
-    const matrix = [];
+    const a = [];
+    let join = 0;
     for (let i = 0; i < words.length; i++) {
-        let val = [];
-        for (let j = 0; j < words[i].length; j++) {
-           val.push(words[i][j]);
-        }
-        matrix.push(val);
+
     }
     let i = 0;
     while ( i < matrix.length) {
