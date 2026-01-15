@@ -23,3 +23,34 @@
  *
  */
 
+var shortestWay = function(source, target) {
+    let map = new Map();
+    for (let i = 0; i < source.length; i++) {
+        if (map.has(source[i])) {
+            let val = map.get(source[i]);
+            val.set(i, i);
+            map.set(source[i], val);
+        } else {
+            let m = new Map();
+            m.set(i, i);
+            map.set(source[i], m);
+        }
+    }
+    let currentIndex = -1;
+    let count = 0;
+    for (let i = 0; i < target.length; i++) {
+        if (!source.has(target[i])) {
+            return -1;
+        }
+        let val = map.get(source[i]);
+        for (let [key, value] of val) {
+            if (val >= i) {
+                currentIndex = i;
+                count++;
+            }
+        }
+    }
+};
+
+console.log(shortestWay("xyzx"));
+

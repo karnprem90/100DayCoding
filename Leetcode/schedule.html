@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Learning Schedule - Printable</title>
+    <style>
+        @page {
+            margin: 0.5in;
+            size: letter;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 10px;
+                line-height: 1.2;
+                background: white;
+                color: black;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 12px;
+            line-height: 1.3;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .print-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .print-btn:hover {
+            background: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 4px 6px;
+            text-align: left;
+            font-size: 10px;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .time-col {
+            width: 25%;
+            font-weight: bold;
+            background-color: #f8f8f8;
+        }
+
+        .highlight {
+            background-color: #e6e6e6;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 15px 0 8px 0;
+            padding: 8px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .focus-section {
+            margin: 10px 0;
+        }
+
+        .focus-title {
+            font-weight: bold;
+            font-size: 11px;
+            margin: 8px 0 4px 0;
+            text-decoration: underline;
+        }
+
+        .focus-list {
+            margin: 0;
+            padding-left: 15px;
+            font-size: 10px;
+        }
+
+        .targets-box {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f5f5f5;
+        }
+
+        .targets-title {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .checklist {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff8e0;
+        }
+
+        .checkbox-item {
+            margin: 5px 0;
+            font-size: 11px;
+        }
+
+        .footer {
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>🎯 DAILY LEARNING SCHEDULE</h1>
+    <p style="margin: 5px 0;">Consistent Growth Through Daily Practice</p>
+
+    <div class="no-print">
+        <button class="print-btn" onclick="window.print()">🖨️ PRINT SCHEDULE</button>
+        <p style="font-size: 11px; margin: 5px 0;">Print Settings: A4/Letter, No Headers/Footers, Normal Margins</p>
+    </div>
+</div>
+
+<div class="section-title">📅 WEEKDAY SCHEDULE (Monday - Friday)</div>
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Activity</th>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">6:00-6:45 AM</td>
+        <td><strong>CODING PRACTICE</strong> (45 min)</td>
+    </tr>
+    <tr>
+        <td class="time-col">6:45-7:00 AM</td>
+        <td>Get ready for badminton</td>
+    </tr>
+    <tr>
+        <td class="time-col">7:00-8:00 AM</td>
+        <td>Badminton</td>
+    </tr>
+    <tr>
+        <td class="time-col">8:00-8:30 AM</td>
+        <td>Recovery + shower</td>
+    </tr>
+    <tr>
+        <td class="time-col">8:30-9:00 AM</td>
+        <td>Breakfast + prep</td>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">9:00-10:00 AM</td>
+        <td><strong>SYSTEM DESIGN / AI</strong> (60 min)</td>
+    </tr>
+    <tr>
+        <td class="time-col">10:00-10:30 AM</td>
+        <td>Get ready for office</td>
+    </tr>
+    <tr>
+        <td class="time-col">10:30 AM-7:30 PM</td>
+        <td>Office Work</td>
+    </tr>
+    <tr>
+        <td class="time-col">8:00-8:30 PM</td>
+        <td>Dinner</td>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">8:30-9:30 PM</td>
+        <td><strong>MOCK INTERVIEW</strong> (60 min)</td>
+    </tr>
+    <tr>
+        <td class="time-col">9:30-10:00 PM</td>
+        <td>Break / Personal time</td>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">10:00-11:00 PM</td>
+        <td><strong>DEEP LEARNING</strong> (60 min)</td>
+    </tr>
+    <tr>
+        <td class="time-col">11:00-11:30 PM</td>
+        <td>Wind down</td>
+    </tr>
+    <tr>
+        <td class="time-col">11:30 PM</td>
+        <td>Sleep</td>
+    </tr>
+</table>
+
+<div class="section-title">🏖️ WEEKEND SCHEDULE (Saturday & Sunday)</div>
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Activity</th>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">6:00-6:45 AM</td>
+        <td><strong>CODING PRACTICE</strong> (45 min)</td>
+    </tr>
+    <tr>
+        <td class="time-col">6:45-8:00 AM</td>
+        <td>Badminton routine</td>
+    </tr>
+    <tr>
+        <td class="time-col">8:00-9:00 AM</td>
+        <td>Recovery + breakfast</td>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">9:00-12:00 PM</td>
+        <td><strong>PROJECT BUILDING</strong> (3 hours)</td>
+    </tr>
+    <tr>
+        <td class="time-col">12:00-1:00 PM</td>
+        <td>Lunch</td>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">1:00-2:30 PM</td>
+        <td><strong>SYSTEM DESIGN DEEP DIVE</strong> (90 min)</td>
+    </tr>
+    <tr class="highlight">
+        <td class="time-col">2:30-4:00 PM</td>
+        <td><strong>AI/MCP PROJECT TIME</strong> (90 min)</td>
+    </tr>
+    <tr>
+        <td class="time-col">4:00 PM+</td>
+        <td>Personal time</td>
+    </tr>
+</table>
+
+<div class="section-title">🔄 DAILY FOCUS ROTATION</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0;">
+    <div class="focus-section">
+        <div class="focus-title">🖥️ CODING (6:00-6:45 AM)</div>
+        <ul class="focus-list">
+            <li>Mon: Arrays & Strings</li>
+            <li>Tue: Trees & Graphs</li>
+            <li>Wed: Dynamic Programming</li>
+            <li>Thu: System Design Problems</li>
+            <li>Fri: Mock Interview Problems</li>
+        </ul>
+    </div>
+
+    <div class="focus-section">
+        <div class="focus-title">🏗️ SYSTEM DESIGN (9:00-10:00 AM)</div>
+        <ul class="focus-list">
+            <li>Mon: High Level Design (HLD)</li>
+            <li>Tue: Low Level Design (LLD)</li>
+            <li>Wed: Generative AI Fundamentals</li>
+            <li>Thu: MCP + Prompt Engineering</li>
+            <li>Fri: Complete System + AI Integration</li>
+        </ul>
+    </div>
+
+    <div class="focus-section">
+        <div class="focus-title">🎤 MOCK INTERVIEW (8:30-9:30 PM)</div>
+        <ul class="focus-list">
+            <li>Mon: Coding Interview Practice</li>
+            <li>Tue: System Design Interview</li>
+            <li>Wed: AI/ML Technical Interview</li>
+            <li>Thu: MCP + Prompt Engineering</li>
+            <li>Fri: Mixed Interview (All Topics)</li>
+        </ul>
+    </div>
+
+    <div class="focus-section">
+        <div class="focus-title">🚀 DEEP LEARNING (10:00-11:00 PM)</div>
+        <ul class="focus-list">
+            <li>Mon: Advanced System Design</li>
+            <li>Tue: Framework Deep Dive</li>
+            <li>Wed: AI Model Training & Fine-tuning</li>
+            <li>Thu: MCP Server Development</li>
+            <li>Fri: Portfolio Projects & Integration</li>
+        </ul>
+    </div>
+</div>
+
+<div class="targets-box">
+    <div class="targets-title">🎯 WEEKLY TARGETS</div>
+    <ul style="margin: 0; padding-left: 15px; font-size: 10px;">
+        <li>✅ <strong>15-20 coding problems solved</strong></li>
+        <li>✅ <strong>2 complete system designs</strong></li>
+        <li>✅ <strong>2 AI/MCP experiments completed</strong></li>
+        <li>✅ <strong>1 framework-based project built</strong></li>
+        <li>✅ <strong>5 mock interviews completed</strong></li>
+        <li>✅ <strong>1 weekend project built (with AI integration)</strong></li>
+    </ul>
+</div>
+
+<div class="checklist">
+    <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">📋 DAILY SUCCESS CHECKLIST</div>
+    <div class="checkbox-item">☐ Morning coding done (6:00-6:45 AM)</div>
+    <div class="checkbox-item">☐ System design/AI done (9:00-10:00 AM)</div>
+    <div class="checkbox-item">☐ Evening mock done (8:30-9:30 PM)</div>
+    <div class="checkbox-item">☐ Deep learning done (10:00-11:00 PM)</div>
+</div>
+
+<div class="footer">
+    <strong>TOTAL DAILY TIME: 3 hours 45 minutes</strong><br>
+    <small>Same time, same duration, every single day. Only the topic changes, never the schedule.</small>
+</div>
+</body>
+</html>
