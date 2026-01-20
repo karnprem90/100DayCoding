@@ -1,0 +1,1 @@
+select seat_id from cinema where seat_id % 2 = 1 and seat_id + 1 in (select seat_id from cinema where seat_id % 2 = 0) order by seat_id;
