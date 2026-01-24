@@ -37,26 +37,25 @@
  */
 var isAlienSorted = function(words, order) {
     let map = new Map();
-    for (let i =0; i <  words.length; i++) {
-        let k = words[i].length;
-        let j = 0;
-        while (k > 0) {
-            if (words[j][i]) {
-                if (map.has(i)) {
-                    let val = map.get(i);
-                    val.push(words[j][i]);
-                    map.set(i, val);
-                } else {
-                    let val = [];
-                    val.push(words[j][i]);
-                    map.set(i, val);
-                }
+    for (let i = 0; i < order.length; i++) {
+        map.set(order[i], i);
+    }
+    for (let i = 0; i < words.length - 1; i++) {
+        let word1 = words[i];
+        let word2 = words[i + 1];
+        let len = Math.min(word1.length, word2.length);
+        for (let j = 0; j < len; j++) {
+            if (map.get(word1[j]) < map.get(word2[j])) {
+                break;
+            } else if (map.get(word1[j]) > map.get(word2[j])) {
+                return false;
             }
-            j++;
-            k--;
+        }
+        if (word1.length > word2.length && word1.slice(0, len) === word2.slice(0, len)) {
+            return false;
         }
     }
-    console.log(map);
+    return true;
 };
 
-console.log(isAlienSorted(["word","world","row"], "worldabcefghijkmnpqstuvxyz"))
+console.log(isAlienSorted(["hello","leetcode"], "hlabcdefgijkmnopqrstuvwxyz"))
