@@ -11,6 +11,6 @@ var maxNumberOfBalloons = function (text) {
         Math.floor((m['o'] || 0) / 2),
         m['n'] || 0
     );
-};
+};1
 
 console.log(maxNumberOfBalloons("nlaebolko"));
