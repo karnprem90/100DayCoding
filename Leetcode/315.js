@@ -48,4 +48,5 @@ function countSmaller(nums) {
     return result;
 }
 
-console.log(countSmaller([10,5,2,7,8,9]));
+// console.log(countSmaller([10, 5, 2, 7, 8, 9]));
+console.log(countSmaller([5,2,6,1]))
